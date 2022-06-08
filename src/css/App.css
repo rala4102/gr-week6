@@ -1,0 +1,160 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 3px solid darkorange;
+}
+
+header > .title {
+  color: darkorange;
+  font-size: 3rem;
+}
+
+main {
+  display: flex;
+  height: 80%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 3px solid yellowgreen;
+  width: 15%;
+  min-width: 100px;
+}
+
+.sidebar > span {
+  margin: 1% 10%;
+  color: yellowgreen;
+  font-size: 2rem;
+}
+
+.sidebar > button {
+  margin: 2% 10%;
+  background-color: black;
+  color: lightpink;
+  font-size: 1rem;
+  font-family: 'Yeon Sung';
+  border: none;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  margin-left: 10px;
+  overflow-y: scroll;
+  border: 3px solid slateblue;
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 180px;
+  height: 220px;
+  padding: 10px 5px;
+  margin: 10px;
+  border: 1px solid salmon;
+  border-radius: 5px;
+  background-color: bisque;
+}
+
+.card > img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.card > span {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.modal-bg {
+  z-index: 1;
+  display: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal {
+  position: fixed;
+  top: 30%;
+  left: 44%;
+  width: 30%;
+  height: 30%;
+  background-color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal > span {
+  display: flex;
+}
+
+.modal > label {
+  display: flex;
+  font-size: 1rem;
+}
+
+.add-item-form {
+  margin-top: 20%;
+}
+
+.close {
+  display: flex;
+  position: absolute;
+  left: 85%;
+  top: 10%;
+  margin: 10px;
+}
+
+.question {
+  margin: 20px 0;
+}
+
+input {
+  margin-left: 10px;
+}
+
+#submit-button {
+  margin: 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .card{
+    background: lightgreen;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card{
+    background: lightcoral;
+  }
+}
+
+@media (max-width: 700px) {
+  .card{
+    background: lightblue;
+  }
+}
+
+@media (max-width: 400px) {
+  .card{
+    background: lightgrey;
+  }
+}
