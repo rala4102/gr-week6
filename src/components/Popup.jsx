@@ -17,18 +17,6 @@ function Popup({ handleState, handleData, data }) {
     closePopUp();
   };
 
-  const handleTitleChange = ({ target }) => {
-    setInputData({ ...inputData, title: target.value});
-  };
-
-  const handleUrlChange = ({ target }) => {
-    setInputData({ ...inputData, url: target.value});
-  };
-
-  const handleDescriptionChange = ({ target }) => {
-    setInputData({ ...inputData, description: target.value});
-  };
-
   return (
     <div className="modal-bg">
       <div className="modal">
@@ -36,15 +24,15 @@ function Popup({ handleState, handleData, data }) {
           <span onClick={closePopUp}>X</span>
           <div className="question">
             <label>이름: </label>
-            <input id="subject" onChange={handleTitleChange} required/>
+            <input id="subject" onChange={(e)=>setInputData(prev=>({...prev, title: e.target.value}))} required/>
           </div>
           <div className="question">
             <label>이미지 URL: </label>
-            <input id="image-url" onChange={handleUrlChange} required />
+            <input id="image-url" onChange={(e)=>setInputData(prev=>({...prev, url: e.target.value}))} required />
           </div>
           <div className="question">
             <label>설명: </label>
-            <input id="content" onChange={handleDescriptionChange} required />
+            <input id="content" onChange={(e)=>setInputData(prev=>({...prev, description: e.target.value}))} required />
           </div>
           <button type="submit">저장</button>
         </form>
