@@ -5,7 +5,7 @@ import Popup from './Popup';
 import '../css/App.css';
 
 function App() {
-  const [isPopUpShow, setIsPopUpShow] = useState(false);
+  const [isModalShow, setIsModalShow] = useState(false);
   const [drinkList, setDrinkList] = useState([{
     title: '소주',
     url: './soju.png',
@@ -18,7 +18,7 @@ function App() {
         <span className="title">신나는 6주차 과제!</span>
       </header>
       <main>
-        <Sidebar data={drinkList} handleState={setIsPopUpShow}/>
+        <Sidebar data={drinkList} handleState={setIsModalShow}/>
         <section className="container">
           {drinkList.map(({ title, url, description }) => {
             return(
@@ -30,9 +30,9 @@ function App() {
             />);
           })}
         </section>
-        {isPopUpShow &&
+        {isModalShow &&
         <Popup
-          handleState={setIsPopUpShow}
+          handleState={setIsModalShow}
           handleData={setDrinkList}
           data={drinkList}
         />
