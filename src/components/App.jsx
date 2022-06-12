@@ -20,7 +20,7 @@ function App() {
       <main>
         <Sidebar data={drinkList} handleState={setIsPopUpShow}/>
         <section className="container">
-          {drinkList?.map(({ title, url, description }) => {
+          {drinkList.map(({ title, url, description }) => {
             return(
             <Card
               key={url}
